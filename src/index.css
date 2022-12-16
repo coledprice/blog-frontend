@@ -1,0 +1,13 @@
+#posts-index img {
+  width: 400px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  background-image: url("./assets/just-waves.webp");
+  text-align: left;
+}
+
