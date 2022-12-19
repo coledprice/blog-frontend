@@ -25,11 +25,14 @@ export function PostsShow(props) {
           body: <input defaultValue={props.post.body} name="body" type="text" />
         </div>
         <br />
-        <button type="submit" className="btn btn-danger">
+        <button type="submit" class="btn btn-success">
           Update
         </button>
       </form>
-      <button onClick={handleClick}>Delete</button>
+      <br />
+      <button onClick={handleClick} type="button" class="btn btn-danger">
+        Delete
+      </button>
     </div>
   );
 }

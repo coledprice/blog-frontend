@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <div>
@@ -15,21 +17,39 @@ export function Header() {
       <header>
         {" "}
         <button type="button" className="btn btn-light">
-          <a href="#" className="link-success">
+          <Link to="/" className="link-success">
             Home
-          </a>
+          </Link>
+        </button>{" "}
+        |{" "}
+        <button type="button" className="btn btn-light">
+          <Link to="/about" className="link-success">
+            About
+          </Link>
+        </button>{" "}
+        |{" "}
+        <button type="button" className="btn btn-light">
+          <Link to="/login" className="link-success">
+            Login
+          </Link>
         </button>{" "}
         |
         <button type="button" className="btn btn-light">
-          <a href="#posts-index" className="link-success">
+          <Link to="/signup" className="link-success">
+            Signup
+          </Link>
+        </button>{" "}
+        |
+        <button type="button" className="btn btn-light">
+          <Link to="/posts-index" className="link-success">
             All Posts
-          </a>
+          </Link>
         </button>{" "}
         |
         <button type="button" className="btn btn-light">
-          <a href="#posts-new" className="link-success">
+          <Link to="/posts-new" className="link-success">
             New Post
-          </a>
+          </Link>
         </button>{" "}
       </header>
     </div>
