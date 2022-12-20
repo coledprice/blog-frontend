@@ -1,6 +1,47 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { Modal } from "./Modal";
+import { Signup } from "./Signup";
+import { useState } from "react";
+import { LogoutLink } from "./LogoutLink";
+import { Login } from "./Login";
+import { PostNew } from "./PostNew";
 
 export function Header() {
+  const [isSignupVisible, setIsSignupVisible] = useState(false);
+  const [isLoginVisible, setIsLoginVisible] = useState(false);
+  const [isPostNewVisible, setIsPostNewVisible] = useState(false);
+
+  const handleSignupShow = () => {
+    setIsSignupVisible(true);
+  };
+
+  const handleSignupClose = () => {
+    setIsSignupVisible(false);
+  };
+
+  const handleLoginShow = () => {
+    setIsLoginVisible(true);
+  };
+
+  const handleLoginClose = () => {
+    setIsLoginVisible(false);
+  };
+  const handlePostNewShow = () => {
+    setIsPostNewVisible(true);
+  };
+
+  const handlePostNewClose = () => {
+    setIsPostNewVisible(false);
+  };
+
+  const handleLogout = (event) => {
+    event.preventDefault();
+    delete axios.defaults.headers.common["Authorization"];
+    localStorage.removeItem("jwt");
+    window.location.href = "/";
+  };
+
   return (
     <div>
       <nav className="navbar bg-light">
@@ -29,13 +70,13 @@ export function Header() {
         </button>{" "}
         |{" "}
         <button type="button" className="btn btn-light">
-          <Link to="/login" className="link-success">
+          <Link onClick={handleLoginShow} to="#" className="link-success">
             Login
           </Link>
         </button>{" "}
         |
         <button type="button" className="btn btn-light">
-          <Link to="/signup" className="link-success">
+          <Link onClick={handleSignupShow} to="#" className="link-success">
             Signup
           </Link>
         </button>{" "}
@@ -47,10 +88,25 @@ export function Header() {
         </button>{" "}
         |
         <button type="button" className="btn btn-light">
-          <Link to="/posts-new" className="link-success">
+          <Link onClick={handlePostNewShow} to="#" className="link-success">
             New Post
           </Link>
         </button>{" "}
+        |
+        <button type="button" className="btn btn-success">
+          <Link onClick={handleLogout} to="#" className="link-light">
+            Log Out
+          </Link>
+        </button>{" "}
+        <Modal show={isSignupVisible} onClose={handleSignupClose}>
+          <Signup />
+        </Modal>
+        <Modal show={isLoginVisible} onClose={handleLoginClose}>
+          <Login />
+        </Modal>
+        <Modal show={isPostNewVisible} onClose={handlePostNewClose}>
+          <PostNew />
+        </Modal>
       </header>
     </div>
   );

@@ -1,5 +1,6 @@
 #posts-index img {
-  width: 400px;
+  width: 200px;
+  height: 200px;
 }
 
 html {
@@ -7,7 +8,26 @@ html {
 }
 
 #root {
-  background-image: url("./assets/just-waves.webp");
+  background-image: url("./assets/christmas-colour.webp");
   text-align: left;
 }
+
+#posts-index h2 {
+  font-size: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+}
+
+#posts-index h4 {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#posts-index h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
 

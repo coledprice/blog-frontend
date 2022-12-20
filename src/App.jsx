@@ -4,10 +4,11 @@ import { About } from "./About";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Home } from "./Home";
-import { Login } from "./Login";
-import { Signup } from "./Signup";
+// import { Login } from "./Login";
+// import { Signup } from "./Signup";
 import { PostsIndex } from "./PostsIndex";
-import { PostNew } from "./PostNew";
+// import { PostNew } from "./PostNew";
+import { LogoutLink } from "./LogoutLink";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/Login" element={<Login />} /> */}
+        {/* <Route path="/signup" element={<Signup />} /> */}
         <Route path="/posts-index" element={<PostsIndex />} />
-        <Route path="/posts-new" element={<PostNew />} />
+        {/* <Route path="/posts-new" element={<PostNew />} /> */}
+        {/* <Route path="#" element={<LogoutLink />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

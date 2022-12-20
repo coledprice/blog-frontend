@@ -33,11 +33,11 @@ export function Home() {
     setIsPostsShowVisible(false);
   };
 
-  const handleCreatePost = (params) => {
-    axios.post("http://localhost:3000/posts.json", params).then((response) => {
-      setPosts([...posts, response.data]);
-    });
-  };
+  // const handleCreatePost = (params) => {
+  //   axios.post("http://localhost:3000/posts.json", params).then((response) => {
+  //     setPosts([...posts, response.data]);
+  //   });
+  // };
 
   const handleUpdatePost = (id, params) => {
     axios.patch(`http://localhost:3000/posts/${id}.json`, params).then((response) => {
@@ -69,18 +69,18 @@ export function Home() {
       <br />
       <div className="container text-center">
         <div className="row">
-          <div className="col">
+          {/* <div className="col">
             <Login />
             <br />
             <LogoutLink />
-          </div>
+          </div> */}
 
-          <div className="col">
+          {/* <div className="col">
             <Signup />
-          </div>
-          <div className="col">
+          </div> */}
+          {/* <div className="col">
             <PostNew onPostCreate={handleCreatePost} />
-          </div>
+          </div> */}
         </div>
       </div>
       <br />

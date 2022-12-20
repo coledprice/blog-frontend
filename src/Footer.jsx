@@ -5,7 +5,7 @@ export function Footer() {
       <h4>© Copywrite 2022</h4>
       <br />
       <br />
-      <button type="button" className="btn btn-light">
+      {/* <button type="button" className="btn btn-light">
         <a href="#" className="link-success">
           Home
         </a>
@@ -21,7 +21,7 @@ export function Footer() {
         <a href="#posts-new" className="link-success">
           New Post
         </a>
-      </button>{" "}
+      </button>{" "} */}
     </div>
   );
 }
