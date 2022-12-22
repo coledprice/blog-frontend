@@ -20,17 +20,18 @@ export function PostNew() {
 
   return (
     <div id="posts-new">
-      <h1>New Post</h1>
+      <h1 class="text-white">New Post</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          title: <input name="title" type="text" />
+        <div class="text-white">
+          Title: <input name="title" type="text" />
         </div>
-        <div>
-          body: <input name="body" type="text" />
+        <div class="text-white">
+          Body: <input name="body" type="text" />
         </div>
-        <div>
-          image: <input name="image" type="text" />
+        <div class="text-white">
+          Image: <input name="image" type="text" />
         </div>
+        <br />
         <button type="submit" className="btn btn-light">
           Create Post
         </button>

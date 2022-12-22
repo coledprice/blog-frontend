@@ -9,6 +9,9 @@ import { Home } from "./Home";
 import { PostsIndex } from "./PostsIndex";
 // import { PostNew } from "./PostNew";
 import { LogoutLink } from "./LogoutLink";
+import React from "react";
+import ReactDOM from "react-dom";
+import Snowfall from "react-snowfall";
 
 function App() {
   return (
@@ -24,6 +27,17 @@ function App() {
         {/* <Route path="#" element={<LogoutLink />} /> */}
       </Routes>
       <Footer />
+      <div style={{ height: 400, width: 400, background: "transparent", position: "relative" }}>
+        <Snowfall
+          style={{
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+          }}
+          snowflakeCount={200}
+        />
+      </div>
+      ,
     </BrowserRouter>
   );
 }

@@ -68,18 +68,6 @@ export function Header() {
             About
           </Link>
         </button>{" "}
-        |{" "}
-        <button type="button" className="btn btn-light">
-          <Link onClick={handleLoginShow} to="#" className="link-success">
-            Login
-          </Link>
-        </button>{" "}
-        |
-        <button type="button" className="btn btn-light">
-          <Link onClick={handleSignupShow} to="#" className="link-success">
-            Signup
-          </Link>
-        </button>{" "}
         |
         <button type="button" className="btn btn-light">
           <Link to="/posts-index" className="link-success">
@@ -92,12 +80,28 @@ export function Header() {
             New Post
           </Link>
         </button>{" "}
-        |
-        <button type="button" className="btn btn-success">
-          <Link onClick={handleLogout} to="#" className="link-light">
-            Log Out
-          </Link>
-        </button>{" "}
+        |{" "}
+        {localStorage.jwt === undefined ? (
+          <>
+            <button type="button" className="btn btn-light">
+              <Link onClick={handleLoginShow} to="#" className="link-success">
+                Login
+              </Link>
+            </button>{" "}
+            |
+            <button type="button" className="btn btn-light">
+              <Link onClick={handleSignupShow} to="#" className="link-success">
+                Signup
+              </Link>
+            </button>{" "}
+          </>
+        ) : (
+          <button type="button" className="btn btn-success">
+            <Link onClick={handleLogout} to="#" className="link-light">
+              Log Out
+            </Link>
+          </button>
+        )}
         <Modal show={isSignupVisible} onClose={handleSignupClose}>
           <Signup />
         </Modal>

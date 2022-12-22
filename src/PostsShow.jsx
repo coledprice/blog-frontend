@@ -14,14 +14,14 @@ export function PostsShow(props) {
 
   return (
     <div id="posts-show">
-      <h2>{props.post.title}</h2>
-      <p>{props.post.body}</p>
-      <h2>Edit Post</h2>
+      <h2 class="text-white">{props.post.title}</h2>
+      <p class="text-white">{props.post.body}</p>
+      <h2 class="text-white">Edit Post</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div class="text-white">
           title: <input defaultValue={props.post.title} name="title" type="text" />
         </div>
-        <div>
+        <div class="text-white">
           body: <input defaultValue={props.post.body} name="body" type="text" />
         </div>
         <br />

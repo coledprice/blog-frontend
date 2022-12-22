@@ -2,6 +2,11 @@
   width: 200px;
   height: 200px;
 }
+#signup img {
+  width: 230px;
+  height: 230px;
+
+}
 
 html {
   scroll-behavior: smooth;

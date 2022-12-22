@@ -36,6 +36,7 @@ export function PostsIndex(props) {
             <div>
               <img src={post.image} className="card-img-top rounded mx-auto d-block" alt="" />
             </div>
+            <br />
             <h4 className="card-text text-center">{post.body}</h4>
             <div className="d-grid gap-2 mx-auto">
               <button className="btn btn-dark" onClick={() => props.onSelectPost(post)}>
